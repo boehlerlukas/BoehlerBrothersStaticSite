@@ -112,36 +112,30 @@ export const IndexPageTemplate = ({
           <div className="row">
             <div className="large-12 columns">
               <div className="work-item">
-                <h3><a href="case-study.html">Flydren</a></h3>
-                <a href="case-study.html"><img src="img/@stock/work-1.jpg" alt="" /></a>
+                <h3><a href="case-study.html">Richtpreise App</a></h3>
+                <a href="case-study.html"><img src="img/richtpreise-app-teaser.jpg" alt="" /></a>
               </div>
             </div>
           </div>
           <div className="row">
             <div className="large-6 columns">
               <div className="work-item">
-                <h3><a href="case-study.html">RAH</a></h3>
-                <a href="case-study.html"><img src="img/@stock/work-2.jpg" alt="" /></a>
+                <h3><a href="case-study.html">WeatherWheel</a></h3>
+                <a href="case-study.html"><img src="img/weatherwheel.jpg" alt="" /></a>
               </div>
             </div>
             <div className="large-6 columns">
               <div className="work-item">
-                <h3><a href="case-study.html">Boloney</a></h3>
-                <a href="case-study.html"><img src="img/@stock/work-3.jpg" alt="" /></a>
+                <h3><a href="case-study.html">Wetterring</a></h3>
+                <a href="case-study.html"><img src="img/wetterring.jpg" alt="" /></a>
               </div>
             </div>
           </div>
-
           <div className="row">
             <div className="large-12 columns">
               <div className="work-item">
-                <h3><a href="case-study-2.html">1736</a></h3>
-                <a href="case-study.html">
-                  <video muted="" loop="loop">
-                    <source src="img/@stock/work-4.mp4" type="video/mp4" />
-                  </video>
-                </a>
-
+                <h3><a href="case-study-2.html">WKV App</a></h3>
+                <a href="case-study.html"><img src="img/wkvnews-app-teaser.jpg" alt="" /></a>
               </div>
             </div>
           </div>
