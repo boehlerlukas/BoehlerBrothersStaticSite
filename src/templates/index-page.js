@@ -24,11 +24,11 @@ export const IndexPageTemplate = ({
           <path d="M6.2,0c0,0,1,0.3,1.7,0.7s1.2,1,3.5,1.4s5.2,1.1,6.2,3.3c1,2.2-0.1,5.8-2.6,7.4s-4.6,1-7.9-0.3S0,9.8,0,9.8L0,0H6.2z"
 
           data-mouseover="M46.6,0c0,0,7.4,2.1,12.8,5.2s8.9,7.5,26.1,10.9s39.1,8.4,46.5,25.1s-0.8,43.6-19.6,55.9s-34.4,7.2-59.8-2S0,73.4,0,73.4L0,0H46.6z"
-          fill="#DF5C65" />
+          fill="#ff4552" />
 
           <path d="M160,90.8c0,0-9.3-3.5-13.2-3.4c0,0-1.1,0.1-2.6,0.4c-1.5,0.3-4.7,0.9-6.1,1.5c-1.4,0.6-4,1.4-4.5,5c-0.5,3.6,0,7.9,0.9,9.5c1,1.6,1.9,1.9,4.6,2.3c2.6,0.4,4.9,0.5,7.9,0.5c3,0,13.1,0,13.1,0L160,90.8z"
           data-mouseover="M160,24.2c0,0-48.5-18.1-69-17.6c0,0-5.9,0.4-13.6,2s-24.2,4.6-31.8,7.6s-21,7.2-23.5,26.2s-0.2,41.2,4.8,49.4s10.1,9.8,23.8,12s25.5,2.8,41.2,2.7s68.1,0,68.1,0L160,24.2z"
-          fill="#402E90" />
+          fill="#0606ff" />
         </svg>
       </div>
       <div className="full">
@@ -50,7 +50,7 @@ export const IndexPageTemplate = ({
         </div>
       </div>
 
-      <div className="full no-top">
+      <div className="full white">
         <div className="row">
           <div className="large-8 large-centered columns">
             <div className="section-title small-margin">
@@ -63,70 +63,48 @@ export const IndexPageTemplate = ({
             </div>
           </div>
         </div>
-        <div className="clients">
-          <div className='row'>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-1-dark.png" />
+        <div className="row">
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/raiffeisen.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-2-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/wko.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-3-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/heron.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-5-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/hypo-il.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-1-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/mcv.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-3-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/boneco.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-5-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/escatec.jpg" />
               </div>
             </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-6-dark.png" />
-              </div>
-            </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-1-dark.png" />
-              </div>
-            </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-3-dark.png" />
-              </div>
-            </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-4-dark.png" />
-              </div>
-            </div>
-            <div className='small-3 medium-2 columns'>
-              <div className="client">
-                <img alt="" src="img/@stock/client-1-dark.png" />
+            <div className="large-3 columns">
+              <div className="customer-client">
+                <img src="img/customers/vkw.jpg" />
               </div>
             </div>
           </div>
-        </div>
       </div>
 
       <div className="full">
@@ -176,11 +154,10 @@ export const IndexPageTemplate = ({
           <div className="large-8 large-centered columns">
             <div className="section-title">
               <h2>
-                We bring our jobs to life
+                App, Web & AI/ML Entwicklung
               </h2>
               <p>
-               Brand strategy | Digital development | Contextual design
-
+               Gemeinsam großes Erschaffen
               </p>
             </div>
           </div>
@@ -188,26 +165,21 @@ export const IndexPageTemplate = ({
 
         <div className="large-6 columns">
           <div className="playground-left">
-            <img src="img/@stock/office-3.jpg" alt="" />
+            <img src="img/office-3.jpg" alt="BoehlerBrothers Team" />
           </div>
         </div>
         <div className="large-6 columns">
-          <div className="playground-small">
-            <img src="img/@stock/office-4.jpg" alt="" className="parallax" />
+          <div className="playground-right-doggoy">
+            <img src="img/office-6.jpg" alt="Office dog Freija" />
           </div>
         </div>
         <div className="clear"></div>
-        <div className="large-12 columns">
-          <div className="playground-right">
-            <img src="img/@stock/office-6.jpg" alt="" />
-          </div>
-        </div>
         <div className="view-services"><a className="text-link" href="service.html">View our services</a></div>
       </div>
       <div className="new-footer full white">
         <h1>
           <a href="works.html">
-            Or, check our work!
+            Projekt anfragen
           </a>
         </h1>
         <svg preserveAspectRatio="none meet" viewBox="0 0 400 100">
