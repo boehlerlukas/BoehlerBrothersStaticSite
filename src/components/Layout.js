@@ -1,9 +1,10 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import Footer from '../components/Footer'
-import Navbar from '../components/Navbar'
-import './all.sass'
-import useSiteMetadata from './SiteMetadata'
+import React from 'react';
+import { Helmet } from 'react-helmet';
+import Footer from '../components/Footer';
+import Navbar from '../components/Navbar';
+import './scss/all.sass';
+import useSiteMetadata from './SiteMetadata';
+import { withPrefix } from 'gatsby';
 
 const TemplateWrapper = ({ children }) => {
   const { title, description } = useSiteMetadata()
@@ -37,6 +38,7 @@ const TemplateWrapper = ({ children }) => {
           href="/img/safari-pinned-tab.svg"
           color="#ff4400"
         />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet"></link>
         <meta name="theme-color" content="#fff" />
 
         <meta property="og:type" content="business.business" />
@@ -47,6 +49,14 @@ const TemplateWrapper = ({ children }) => {
       <Navbar />
       <div>{children}</div>
       <Footer />
+
+      <Helmet>
+        <script type="text/javascript" src={ withPrefix('js/jquery/dist/jquery.min.js') }></script>
+        <script type="text/javascript" src={ withPrefix('js/snap.svg.js') }></script>
+        <script type="text/javascript" src={ withPrefix('js/what-input/dist/what-input.min.js') }></script>
+        <script type="text/javascript" src={ withPrefix('js/foundation-sites/dist/js/foundation.min.js') }></script>
+        <script type="text/javascript" src={ withPrefix('js/app.js') }></script>
+      </Helmet>
     </div>
   )
 }

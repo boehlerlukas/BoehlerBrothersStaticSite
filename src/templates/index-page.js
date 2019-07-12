@@ -1,129 +1,228 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import { Link, graphql } from 'gatsby'
+import React from 'react';
+import PropTypes from 'prop-types';
+import { graphql } from 'gatsby';
 
-import Layout from '../components/Layout'
-import Features from '../components/Features'
-import BlogRoll from '../components/BlogRoll'
+import Layout from '../components/Layout';
 
 export const IndexPageTemplate = ({
-  image,
   title,
-  heading,
-  subheading,
-  mainpitch,
-  description,
-  intro,
 }) => (
-  <div>
-    <div
-      className="full-width-image margin-top-0"
-      style={{
-        backgroundImage: `url(${
-          !!image.childImageSharp ? image.childImageSharp.fluid.src : image
-        })`,
-        backgroundPosition: `top left`,
-        backgroundAttachment: `fixed`,
-      }}
-    >
-      <div
-        style={{
-          display: 'flex',
-          height: '150px',
-          lineHeight: '1',
-          justifyContent: 'space-around',
-          alignItems: 'left',
-          flexDirection: 'column',
-        }}
-      >
-        <h1
-          className="has-text-weight-bold is-size-3-mobile is-size-2-tablet is-size-1-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {title}
+  <div id="content">
+      <div id="header" className="header-svg">
+        <h1 className="center-x center-y">
+          App &<br />
+          Web - Entwicklung<br />
+          aus Vorarlberg
         </h1>
-        <h3
-          className="has-text-weight-bold is-size-5-mobile is-size-5-tablet is-size-4-widescreen"
-          style={{
-            boxShadow:
-              'rgb(255, 68, 0) 0.5rem 0px 0px, rgb(255, 68, 0) -0.5rem 0px 0px',
-            backgroundColor: 'rgb(255, 68, 0)',
-            color: 'white',
-            lineHeight: '1',
-            padding: '0.25em',
-          }}
-        >
-          {subheading}
-        </h3>
+        <img className="parallax-element fist center-x" data-parallax-deep="1000" src="img/@stock/fist.png" alt="" />
+        <img className="parallax-element circle-multiply" data-parallax-deep="100" src="img/circle-multiply.png" alt="" />
+        <img className="parallax-element wave animo" data-parallax-deep="150" data-parallax-speed="1.2" data-animo-rotate="120deg" data-animo-bottom="-70%" data-animo-right="18%" src="img/wave.png" alt="" />
+        <img className="parallax-element triangle animo" data-animo-right="25%" data-animo-bottom="-65%" data-animo-rotate="360deg" data-parallax-deep="200" src="img/triangle.png" alt="" />
+        <img className="parallax-element circle-dissolve animo" data-parallax-speed="0.5" data-animo-bottom="-74%" data-parallax-deep="20" src="img/circle-dissolve.png" alt="" />
+
+        <svg preserveAspectRatio="none meet" viewBox="0 0 160 100">
+          <path d="M6.2,0c0,0,1,0.3,1.7,0.7s1.2,1,3.5,1.4s5.2,1.1,6.2,3.3c1,2.2-0.1,5.8-2.6,7.4s-4.6,1-7.9-0.3S0,9.8,0,9.8L0,0H6.2z"
+
+          data-mouseover="M46.6,0c0,0,7.4,2.1,12.8,5.2s8.9,7.5,26.1,10.9s39.1,8.4,46.5,25.1s-0.8,43.6-19.6,55.9s-34.4,7.2-59.8-2S0,73.4,0,73.4L0,0H46.6z"
+          fill="#DF5C65" />
+
+          <path d="M160,90.8c0,0-9.3-3.5-13.2-3.4c0,0-1.1,0.1-2.6,0.4c-1.5,0.3-4.7,0.9-6.1,1.5c-1.4,0.6-4,1.4-4.5,5c-0.5,3.6,0,7.9,0.9,9.5c1,1.6,1.9,1.9,4.6,2.3c2.6,0.4,4.9,0.5,7.9,0.5c3,0,13.1,0,13.1,0L160,90.8z"
+          data-mouseover="M160,24.2c0,0-48.5-18.1-69-17.6c0,0-5.9,0.4-13.6,2s-24.2,4.6-31.8,7.6s-21,7.2-23.5,26.2s-0.2,41.2,4.8,49.4s10.1,9.8,23.8,12s25.5,2.8,41.2,2.7s68.1,0,68.1,0L160,24.2z"
+          fill="#402E90" />
+        </svg>
       </div>
-    </div>
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="section">
-          <div className="columns">
-            <div className="column is-10 is-offset-1">
-              <div className="content">
-                <div className="content">
-                  <div className="tile">
-                    <h1 className="title">{mainpitch.title}</h1>
-                  </div>
-                  <div className="tile">
-                    <h3 className="subtitle">{mainpitch.description}</h3>
-                  </div>
-                </div>
-                <div className="columns">
-                  <div className="column is-12">
-                    <h3 className="has-text-weight-semibold is-size-2">
-                      {heading}
-                    </h3>
-                    <p>{description}</p>
-                  </div>
-                </div>
-                <Features gridItems={intro.blurbs} />
-                <div className="columns">
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/products">
-                      See all products
-                    </Link>
-                  </div>
-                </div>
-                <div className="column is-12">
-                  <h3 className="has-text-weight-semibold is-size-2">
-                    Latest stories
-                  </h3>
-                  <BlogRoll />
-                  <div className="column is-12 has-text-centered">
-                    <Link className="btn" to="/blog">
-                      Read more
-                    </Link>
-                  </div>
-                </div>
+      <div className="full">
+        <div className="intro-text">
+          <div className="row">
+            <div className="large-6 columns">
+              <h2>Hi there!</h2>
+            </div>
+            <div className="large-6 columns">
+              <p>
+              Wir bieten innovative Softwarelösungen, Prototypen
+              und Konzepte, die Ihr Unternehmen oder Vorhaben
+              in die Zukunft begleiten!
+              <br /><br />#web #app #ai #vorarlberg
+              </p>
+              <p><a href="about.html" className="text-link">How we work</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="full no-top">
+        <div className="row">
+          <div className="large-8 large-centered columns">
+            <div className="section-title small-margin">
+              <h2>
+              Wir arbeiten für die Besten
+              </h2>
+              <p>
+              Innovative, digitale Lösungen für anspruchsvolle Kunden.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div className="clients">
+          <div className='row'>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-1-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-2-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-3-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-5-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-1-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-3-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-5-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-6-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-1-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-3-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-4-dark.png" />
+              </div>
+            </div>
+            <div className='small-3 medium-2 columns'>
+              <div className="client">
+                <img alt="" src="img/@stock/client-1-dark.png" />
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-  </div>
+
+      <div className="full">
+        <div className="works">
+          <div className="row">
+            <div className="large-12 columns">
+              <div className="work-item">
+                <h3><a href="case-study.html">Flydren</a></h3>
+                <a href="case-study.html"><img src="img/@stock/work-1.jpg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="large-6 columns">
+              <div className="work-item">
+                <h3><a href="case-study.html">RAH</a></h3>
+                <a href="case-study.html"><img src="img/@stock/work-2.jpg" alt="" /></a>
+              </div>
+            </div>
+            <div className="large-6 columns">
+              <div className="work-item">
+                <h3><a href="case-study.html">Boloney</a></h3>
+                <a href="case-study.html"><img src="img/@stock/work-3.jpg" alt="" /></a>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="large-12 columns">
+              <div className="work-item">
+                <h3><a href="case-study-2.html">1736</a></h3>
+                <a href="case-study.html">
+                  <video muted="" loop="loop">
+                    <source src="img/@stock/work-4.mp4" type="video/mp4" />
+                  </video>
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="view-all"><a className="text-link" href="works.html">View all works</a></div>
+      </div>
+
+      <div className="full no-sides white">
+        <div className="row">
+          <div className="large-8 large-centered columns">
+            <div className="section-title">
+              <h2>
+                We bring our jobs to life
+              </h2>
+              <p>
+               Brand strategy | Digital development | Contextual design
+
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="large-6 columns">
+          <div className="playground-left">
+            <img src="img/@stock/office-3.jpg" alt="" />
+          </div>
+        </div>
+        <div className="large-6 columns">
+          <div className="playground-small">
+            <img src="img/@stock/office-4.jpg" alt="" className="parallax" />
+          </div>
+        </div>
+        <div className="clear"></div>
+        <div className="large-12 columns">
+          <div className="playground-right">
+            <img src="img/@stock/office-6.jpg" alt="" />
+          </div>
+        </div>
+        <div className="view-services"><a className="text-link" href="service.html">View our services</a></div>
+      </div>
+      <div className="new-footer full white">
+        <h1>
+          <a href="works.html">
+            Or, check our work!
+          </a>
+        </h1>
+        <svg preserveAspectRatio="none meet" viewBox="0 0 400 100">
+          <path d="M47.5,100c0,0,50.1-73.9,118.8-56.4c0,0,33.9,7.9,43.6,28.4c9.7,20.5-3.2,28-3.2,28H47.5z"
+            data-mouseout="M47.5,100c0,0,50.1-73.9,118.8-56.4c0,0,33.9,7.9,43.6,28.4c9.7,20.5-3.2,28-3.2,28H47.5z"
+            data-mouseover="M-163,100c0,0,195.3-290.1,462.9-221.5c0,0,132,31.1,170,111.4S457.2,100,457.2,100H-163z"
+            fill="#24e394" />
+        </svg>
+      </div>
+
+    </div>
 )
 
 IndexPageTemplate.propTypes = {
-  image: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   title: PropTypes.string,
-  heading: PropTypes.string,
-  subheading: PropTypes.string,
-  mainpitch: PropTypes.object,
-  description: PropTypes.string,
-  intro: PropTypes.shape({
-    blurbs: PropTypes.array,
-  }),
 }
 
 const IndexPage = ({ data }) => {
@@ -132,13 +231,7 @@ const IndexPage = ({ data }) => {
   return (
     <Layout>
       <IndexPageTemplate
-        image={frontmatter.image}
         title={frontmatter.title}
-        heading={frontmatter.heading}
-        subheading={frontmatter.subheading}
-        mainpitch={frontmatter.mainpitch}
-        description={frontmatter.description}
-        intro={frontmatter.intro}
       />
     </Layout>
   )
@@ -159,34 +252,6 @@ export const pageQuery = graphql`
     markdownRemark(frontmatter: { templateKey: { eq: "index-page" } }) {
       frontmatter {
         title
-        image {
-          childImageSharp {
-            fluid(maxWidth: 2048, quality: 100) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        heading
-        subheading
-        mainpitch {
-          title
-          description
-        }
-        description
-        intro {
-          blurbs {
-            image {
-              childImageSharp {
-                fluid(maxWidth: 240, quality: 64) {
-                  ...GatsbyImageSharpFluid
-                }
-              }
-            }
-            text
-          }
-          heading
-          description
-        }
       }
     }
   }
